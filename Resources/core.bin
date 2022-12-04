@@ -23,7 +23,7 @@ namespace Calculator_Tutorial___User_Interface
             textBox2.Text = "1";
         }
 
-        // numMode parameters
+        // numMode parameters - it shows you what the numOperations do
         // ******************
         // 1 for +
         // 2 for -
@@ -35,10 +35,10 @@ namespace Calculator_Tutorial___User_Interface
 
         public static class varGroup
         {
-            public static int numMode;
-            public static int num1;
-            public static int num2;
-            public static int result;
+            public static int numMode; // for number mode type
+            public static int num1; // num1 to (numMode) with num2
+            public static int num2; // num2 to (numMode) with num1
+            public static int result; // collects the result and in a 50ms loop (forever loop but don't freeze app) + in another script, puts the textbox's text to this result
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -46,24 +46,24 @@ namespace Calculator_Tutorial___User_Interface
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // NEXT BUTTON--numMode controller, another script will indicate label in another 50ms loop
         {
             if (varGroup.numMode == 4)
             {
-                varGroup.numMode = 1;
+                varGroup.numMode = 1; // so dosen't get stuck
             }
             else
             {
-                varGroup.numMode++;
+                varGroup.numMode++; // keep going
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            varGroup.numMode = 1;
+            varGroup.numMode = 1; // reset to default numMode value
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // LOOP timer1 SCRIPT 50ms for indicating numMode parameter on label
         {
             if (varGroup.numMode == 1)
             {
@@ -84,14 +84,14 @@ namespace Calculator_Tutorial___User_Interface
 
             
 
-            this.Update();
-            this.Refresh();
+            this.Update(); // Updates the window (prob without flicker)
+            this.Refresh(); // Refreshes the window (low chance of flicker)
             
-            timer1.Interval = 50;
+            timer1.Interval = 50; // 50 ms loop with timer1 enabled
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // Calculates num1 (numMode parameter) num2 , then stores it in textbox3 to display result on the form
         {
             if (varGroup.numMode == 1)
             {
@@ -120,7 +120,7 @@ namespace Calculator_Tutorial___User_Interface
             
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e) // loop script (50ms) to keep setting the num1 and num2 to the input
         {
             if (textBox1.TextLength > 0)
             {
@@ -134,28 +134,28 @@ namespace Calculator_Tutorial___User_Interface
             }
             else if (textBox1.TextLength == 0)
             {
-                textBox1.Text = "1";
+                textBox1.Text = "1"; // THIS DEBUG SCRIPT DOES NOT WORK AS OF RIGHT NOW
             }
             else if (textBox2.TextLength == 0)
             {
-                textBox1.Text = "1";
+                textBox1.Text = "1"; // THIS ONE ALSO
             }
 
-            timer2.Interval = 50;
+            timer2.Interval = 50; // loop 50ms
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // Opens the help window: WARNING: DONT COMPILE THIS, USE SOURCE CODE.zip
         {
-            help Help = new help();
+            help Help = new help(); // Creates a new instance of Help Window
             Help.ShowDialog();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized; // UI.minimize
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e) // Exit UI button
         {
             Application.Exit();
 
@@ -170,7 +170,7 @@ namespace Calculator_Tutorial___User_Interface
             }
         }
 
-        protected override void WndProc(ref Message m)
+        protected override void WndProc(ref Message m) // Code from here onwards is the borderless-form moving script, allows to move/drag window without border
         {
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST)
@@ -181,7 +181,7 @@ namespace Calculator_Tutorial___User_Interface
         private const int HT_CLIENT = 0x1;
         private const int HT_CAPTION = 0x2;
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // This is changelog button
         {
             MessageBox.Show("V0.8 - UI Design, V0.8.1.5 - Partial calculating assets, V0.8.4.8 - Fix issues and add all calculations, V0.9 - New help Ui and fix cache issues, new look and feel, 0.9.1.5 - Prototype final", "Changelogs", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
