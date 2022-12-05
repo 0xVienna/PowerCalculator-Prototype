@@ -8,6 +8,7 @@ Download Links -
 
 # Updates & Changelogs
 Shows you the highlights of upcoming updates
+
 V0.75 -
 
 • Updated bootstraps and better application support
@@ -19,8 +20,18 @@ V0.75 -
 • Variables
 
 V0.8.0.1 -
+
 • [New] FULLY WORKING calculator
+
 • Fix some more bugs
+
+V0.9 Final -
+
+• Final with cannot fixed bugs
+
+• Best compatibility
+
+• Help centre
 
 # More info
 https://sites.google.com/view/calcofpower/home?authuser=2
