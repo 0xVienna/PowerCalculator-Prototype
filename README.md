@@ -2,6 +2,7 @@
 
 1. https://github.com/0xVienna/PowerCalculator-Prototype#powercalculator-prototype • Main
 2. https://github.com/0xVienna/PowerCalculator-Prototype#updates--changelogs • Update and changelogs
+3. https://github.com/0xVienna/PowerCalculator-Prototype#more-info • More information
 
 # PowerCalculator-Prototype
 A GUI standard calculator that works with Windows 7/8/10/11.
