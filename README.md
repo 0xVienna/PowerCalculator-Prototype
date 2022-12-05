@@ -9,9 +9,13 @@ Download Links -
 # Updates & Changelogs
 Shows you the highlights of upcoming updates
 V0.75 -
+
 • Updated bootstraps and better application support
+
 • New user-interface--look and feel
+
 • Fix calculating bug
+
 • Variables
 
 V0.8.0.1 -
