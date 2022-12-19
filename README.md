@@ -17,27 +17,27 @@ Shows you the highlights of upcoming updates
 
 # 0.75
 
-• Updated bootstraps and better application support
+- Updated bootstraps and better application support
 
-• New user-interface--look and feel
+- New user-interface--look and feel
 
-• Fix calculating bug
+- Fix calculating bug
 
-• Variables
+- Variables
 
 # 0.8.0.1
 
-• [New] FULLY WORKING calculator
+- [New] FULLY WORKING calculator
 
-• Fix some more bugs
+- Fix some more bugs
 
 # 0.9
 
-• Final with cannot fixed bugs
+- Final with cannot fixed bugs
 
-• Best compatibility
+- Best compatibility
 
-• Help centre
+- Help centre
 
 - Fix some other issues
 
