@@ -41,6 +41,12 @@ Shows you the highlights of upcoming updates
 
 - Fix some other issues
 
+# 1.0.1.9 [WIP]
+
+- New UI
+
+- Fix some other bugs
+
 # More info
 https://sites.google.com/view/calcofpower/home?authuser=2
 
