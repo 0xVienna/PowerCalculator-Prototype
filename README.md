@@ -6,6 +6,7 @@
 
 # PowerCalculator-Prototype
 A GUI standard calculator that works with Windows 7/8/10/11.
+This calc mechanism works by looping 50ms
 
 ![image](https://i.imgur.com/tMfKJAq.png)
 
